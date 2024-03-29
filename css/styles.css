@@ -1,0 +1,20 @@
+#main-nav {
+  background: #032f32;
+}
+#main-nav ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#main-nav li {
+  width: 14%;
+}
+#main-nav a {
+  color: #f8f9fb;
+}
+
+section h1 {
+  font-size: 24px;
+  color: #032f32;
+}

@@ -1,0 +1,23 @@
+//variables
+
+$deepBlue: #032f32;
+$offWhite: #f8f9fb;
+$sectionHeading: 24px;
+
+#main-nav{
+    background: $deepBlue;
+    ul{
+        width: 100%;
+        display: flex;
+    }
+    li{        
+        width: 14%;
+    }
+    a{
+        color: $offWhite;
+    }
+}
+section h1 {
+    font-size: $sectionHeading;
+    color: $deepBlue ;
+}
