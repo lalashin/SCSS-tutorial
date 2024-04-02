@@ -1,23 +1,100 @@
-//variables
-
-$deepBlue: #032f32;
-$offWhite: #f8f9fb;
-$sectionHeading: 24px;
+@import "reset";
+@import "variables";
+@import "mixins";
 
 #main-nav{
     background: $deepBlue;
     ul{
         width: 100%;
         display: flex;
+        @include mQ(600px){
+            flex-direction: column;
+        }
+        //@include clearFix;//display flex 기능이 업그레이드되어서 불필요
     }
-    li{        
-        width: 14%;
+    li{   
+        //float: left;     
+        width: calc(100% / 6);
+        @include mQ(600px){
+            width: 100%;
+        }
     }
     a{
         color: $offWhite;
+        text-decoration: none;
+        padding: 16px;
+        display: block;
+        text-align: center;
+        &:hover{
+            // background: #333;
+            background: lighten($deepBlue, 6);
+        
+        }
     }
-}
+}//end #main-nav
+
+
+    
+
+
 section h1 {
     font-size: $sectionHeading;
     color: $deepBlue ;
+}
+
+.lead-banner {
+    @include banner;
+    text-align: right;
+}
+
+.lessons-banner {
+    @include banner;
+    li {
+        text-transform: uppercase;
+        font-size: 20px;
+        min-width: 500px;
+        margin: 60px;
+    }
+   
+}
+
+#services {
+    margin-bottom: 60px;;
+    ul {
+        display: flex;
+    }
+    li {
+        box-sizing: border-box;
+        text-align: center;
+        width: calc(100% / 3);
+    }
+    img {
+        width: 60%;
+        margin: 20px 20%;
+    }
+    a{
+        text-decoration: none;
+        color: $deepBlue;
+        font-weight: bold;
+        &:hover {
+            // color:red;
+            color: complement($deepBlue);
+        }
+        
+    }
+}
+
+#projects {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    li {
+       @include grid(4, 2%);
+
+        img {
+            width: 100%;
+        }
+
+    }
 }

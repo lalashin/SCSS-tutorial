@@ -1,3 +1,34 @@
+body {
+  font-family: arial;
+  background: #f8f9fb;
+}
+
+html, body, ul, ol, li, form, fieldset, legend {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 #main-nav {
   background: #032f32;
 }
@@ -7,14 +38,145 @@
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 600px) {
+  #main-nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 #main-nav li {
-  width: 14%;
+  width: 16.6666666667%;
+}
+@media screen and (max-width: 600px) {
+  #main-nav li {
+    width: 100%;
+  }
 }
 #main-nav a {
   color: #f8f9fb;
+  text-decoration: none;
+  padding: 16px;
+  display: block;
+  text-align: center;
+}
+#main-nav a:hover {
+  background: #054a4f;
 }
 
 section h1 {
   font-size: 24px;
   color: #032f32;
+}
+
+.lead-banner {
+  width: 100%;
+  position: relative;
+  color: white;
+  text-align: right;
+}
+.lead-banner .banner-content {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+.lead-banner img {
+  width: 100%;
+}
+.lead-banner span {
+  font-size: 46px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+@media screen and (max-width: 4000px) and (min-width: 1200px) {
+  .lead-banner span {
+    font-size: 68px;
+  }
+}
+.lead-banner span.title {
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.lessons-banner {
+  width: 100%;
+  position: relative;
+  color: white;
+}
+.lessons-banner .banner-content {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+.lessons-banner img {
+  width: 100%;
+}
+.lessons-banner span {
+  font-size: 46px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+@media screen and (max-width: 4000px) and (min-width: 1200px) {
+  .lessons-banner span {
+    font-size: 68px;
+  }
+}
+.lessons-banner span.title {
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.lessons-banner li {
+  text-transform: uppercase;
+  font-size: 20px;
+  min-width: 500px;
+  margin: 60px;
+}
+
+#services {
+  margin-bottom: 60px;
+}
+#services ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#services li {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  width: 33.3333333333%;
+}
+#services img {
+  width: 60%;
+  margin: 20px 20%;
+}
+#services a {
+  text-decoration: none;
+  color: #032f32;
+  font-weight: bold;
+}
+#services a:hover {
+  color: #320603;
+}
+
+#projects ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+#projects li {
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 23.5%;
+}
+#projects li:nth-child(4n) {
+  margin-right: 0;
+}
+#projects li img {
+  width: 100%;
 }
