@@ -1,13 +1,21 @@
 <!doctype html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link href="css/styles.css" type="text/css" rel="stylesheet"/>
+    
+
   </head>
   <body>
     <header>
       <nav id="main-nav">
         <div class="wrapper">
-          <ul>
+          <div class="mGNB">
+            <button class="mIcon xi-icon"></button>
+          </div>
+          
+          <ul class="gnb">
             <li><a href="#">Home</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Lessons</a></li>
@@ -80,5 +88,18 @@
         </ul>
       </div>
     </section>
+
+    <script>
+        const menu = document.querySelector('.gnb');
+        const mIcon = document.querySelector('.mIcon');
+        const mBtn = document.querySelector('.mGNB');
+
+        mBtn.addEventListener('click',(e) => {
+            console.log(e.target);
+            menu.classList.toggle('active')
+            mIcon.classList.toggle('active')
+        }
+        )
+    </script>
   </body>
 </html>

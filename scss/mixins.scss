@@ -20,10 +20,17 @@
         @include mQ(4000px, 1200px){
             font-size: 68px;
         }
+        @include mQ(768px){
+            font-size: 6.2500vw;
+        }
     }
     span.title {
         font-weight: normal;
         margin-bottom: 30px;
+        @include mQ(768px){
+            font-size: 3.9063vw;
+            margin-bottom: 1.3021vw;
+        }
     }
 }
 

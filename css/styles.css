@@ -21,6 +21,7 @@ li {
 }
 
 .wrapper {
+  position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -29,8 +30,15 @@ li {
           box-sizing: border-box;
 }
 
+.xi-icon {
+  font-family: xeicon !important;
+}
+
 #main-nav {
   background: #032f32;
+}
+#main-nav .mGNB {
+  display: none;
 }
 #main-nav ul {
   width: 100%;
@@ -38,21 +46,8 @@ li {
   display: -ms-flexbox;
   display: flex;
 }
-@media screen and (max-width: 600px) {
-  #main-nav ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
 #main-nav li {
   width: 16.6666666667%;
-}
-@media screen and (max-width: 600px) {
-  #main-nav li {
-    width: 100%;
-  }
 }
 #main-nav a {
   color: #f8f9fb;
@@ -63,6 +58,70 @@ li {
 }
 #main-nav a:hover {
   background: #054a4f;
+}
+@media screen and (max-width: 768px) {
+  #main-nav .mGNB {
+    display: block;
+    position: absolute;
+    top: 2.6042vw;
+    left: 2.6042vw;
+    width: 6.5104vw;
+    height: 6.5104vw;
+    z-index: 20;
+  }
+  #main-nav .mGNB button {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: 0.2604vw solid #032f32;
+    border-radius: 1.3021vw;
+    cursor: pointer;
+  }
+  #main-nav .mGNB button:before {
+    position: absolute;
+    content: "\e91c";
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    color: #032f32;
+    font-size: 3.6458vw;
+    font-weight: bold;
+  }
+  #main-nav .mGNB button.active:before {
+    content: "\e921";
+  }
+  #main-nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+    -webkit-transition: -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    background: #032f32;
+    z-index: 10;
+  }
+  #main-nav ul.active {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  #main-nav li {
+    width: 100%;
+  }
 }
 
 section h1 {
@@ -95,9 +154,20 @@ section h1 {
     font-size: 68px;
   }
 }
+@media screen and (max-width: 768px) {
+  .lead-banner span {
+    font-size: 6.25vw;
+  }
+}
 .lead-banner span.title {
   font-weight: normal;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .lead-banner span.title {
+    font-size: 3.9063vw;
+    margin-bottom: 1.3021vw;
+  }
 }
 
 .lessons-banner {
@@ -124,15 +194,33 @@ section h1 {
     font-size: 68px;
   }
 }
+@media screen and (max-width: 768px) {
+  .lessons-banner span {
+    font-size: 6.25vw;
+  }
+}
 .lessons-banner span.title {
   font-weight: normal;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .lessons-banner span.title {
+    font-size: 3.9063vw;
+    margin-bottom: 1.3021vw;
+  }
 }
 .lessons-banner li {
   text-transform: uppercase;
   font-size: 20px;
   min-width: 500px;
   margin: 60px;
+}
+@media screen and (max-width: 768px) {
+  .lessons-banner li {
+    font-size: 2.0833vw;
+    min-width: 0;
+    margin: 2.6042vw;
+  }
 }
 
 #services {
@@ -176,6 +264,16 @@ section h1 {
 }
 #projects li:nth-child(4n) {
   margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  #projects li {
+    margin-right: 2%;
+    margin-bottom: 2%;
+    width: 49%;
+  }
+  #projects li:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 #projects li img {
   width: 100%;
