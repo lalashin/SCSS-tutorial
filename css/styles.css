@@ -143,6 +143,20 @@ section h1 {
 .lead-banner img {
   width: 100%;
 }
+.lead-banner .pc-img {
+  display: block;
+}
+.lead-banner .mo-img {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .lead-banner .pc-img {
+    display: none;
+  }
+  .lead-banner .mo-img {
+    display: block;
+  }
+}
 .lead-banner span {
   font-size: 46px;
   display: block;
@@ -182,6 +196,20 @@ section h1 {
 }
 .lessons-banner img {
   width: 100%;
+}
+.lessons-banner .pc-img {
+  display: block;
+}
+.lessons-banner .mo-img {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .lessons-banner .pc-img {
+    display: none;
+  }
+  .lessons-banner .mo-img {
+    display: block;
+  }
 }
 .lessons-banner span {
   font-size: 46px;

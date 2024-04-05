@@ -11,7 +11,14 @@
     }
     img {
         width: 100%;
-    }    
+    } 
+    .pc-img { display: block;}   
+    .mo-img { display: none;}
+    @include mQ(768px){
+        .pc-img { display: none;}   
+        .mo-img { display: block;}
+    }
+
     span {
         font-size: $bannerHeading;
         display: block;
